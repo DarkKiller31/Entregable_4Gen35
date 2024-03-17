@@ -50,19 +50,19 @@ const FormUser = ({ createUser, userEdit, updateUser, setUserEdit, formIsClose, 
       </header>
       <label className="form__label">
         <span className="form_field">Email</span>
-        <input className="form__input" {...register('email')} type="email" />
+        <input className="form__input" {...register('email')} type="email" placeholder="sample@mail.com" />
       </label>
       <label className="form__label">
         <span className="form_field">Password</span>
-        <input className="form__input" {...register('password')} type="password" />
+        <input className="form__input" {...register('password')} type="password" placeholder="*******"/>
       </label>
       <label className="form__label">
         <span className="form_field">First Name</span>
-        <input className="form__input" {...register('first_name')} type="text" />
+        <input className="form__input" {...register('first_name')} type="text" placeholder="Your name . . ."/>
       </label>
       <label className="form__label">
         <span className="form_field">Last name</span>
-        <input className="form__input" {...register('last_name')} type="text" />
+        <input className="form__input" {...register('last_name')} type="text" placeholder="Your last name . . ."/>
       </label>
       <label className="form__label">
         <span className="form_field">Birthday</span>
