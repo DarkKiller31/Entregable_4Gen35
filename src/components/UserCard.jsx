@@ -2,10 +2,13 @@ import './styles/UserCard.css'
 import { FaRegTrashCan } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
 import { BsFillGiftFill } from "react-icons/bs";
+import DeleteUser from './DeleteUser';
 
-const UserCard = ({ user, deleteUser, setUserEdit, handleOpenForm }) => {
+const UserCard = ({ user, deleteUser, setUserEdit, handleOpenForm, handleOpenDelete, setDeleteCard }) => {
 
   const handleDelete = () => {
+    handleOpenDelete()
+    setDeleteCard(user)
     deleteUser('/users/', user.id)
   }
 
@@ -28,6 +31,7 @@ const UserCard = ({ user, deleteUser, setUserEdit, handleOpenForm }) => {
         <div onClick={handleEdit}className='card__edit' ><MdEdit /></div>
       </div>
     </article>
+
   )
 }
 

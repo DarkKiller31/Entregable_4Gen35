@@ -3,12 +3,17 @@ import './App.css'
 import useCrud from './hooks/useCrud'
 import FormUser from './components/FormUser'
 import UserCard from './components/UserCard'
+import DeleteUser from './components/DeleteUser'
 
 
 function App() {
 
   const [userEdit, setUserEdit] = useState()
   const [formIsClose, setFormIsClose] = useState(true)
+  const [deleteCard, setDeleteCard] = useState()
+  const [deleteUserCard, setDeleteUserCard] = useState(true)
+
+
 
   const BASEURL = 'https://users-crud.academlo.tech'
   const [ users, getUsers, createUser, deleteUser, updateUser ] = useCrud(BASEURL)
@@ -19,6 +24,10 @@ function App() {
 
   const handleOpenForm = () => {
     setFormIsClose(false)
+  }
+
+  const handleOpenDelete = () => {
+    setDeleteUserCard(false)
   }
 
   return (
@@ -35,6 +44,11 @@ function App() {
         formIsClose={formIsClose}
         setFormIsClose={setFormIsClose}
       />
+      <DeleteUser 
+        deleteCard={deleteCard}
+        deleteUserCard={deleteUserCard}
+        setDeleteUserCard={setDeleteUserCard}
+      />
       <div className='user-container'>
         {
           users?.map(user => (
@@ -44,6 +58,8 @@ function App() {
               deleteUser={deleteUser}
               setUserEdit={setUserEdit}
               handleOpenForm={handleOpenForm}
+              setDeleteCard={setDeleteCard}
+              handleOpenDelete={handleOpenDelete}
             />
           ))
         }
