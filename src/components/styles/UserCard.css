@@ -1,0 +1,74 @@
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  border: 2px solid rgba(103, 102, 102, 0.119);
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 1em;
+  height: 100%;
+  min-height: 250px;
+  background-color: rgb(33, 33, 33);
+  transition: transform 150ms ease;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 0.5em 0.2em #227008a4;
+  }
+}
+.card__title {
+  text-align: center;
+  color: #047a02;
+  padding-bottom: 0.5em;
+}
+hr {
+  border: 0.5px solid rgba(128, 128, 128, 0.113);
+}
+.card__list {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+span {
+  display: block;
+  padding: 0.2em;
+  color: #d0cfcf;
+}
+.card__item {
+  color: #227008;
+  font-weight: 500;
+}
+.card__btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4em;
+  padding-top: 1em;
+}
+.card__delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #D93F3F;
+  width: 43px;
+  height: 43px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 24px;
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+.card__edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #227008;
+  width: 43px;
+  height: 43px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 24px;
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
