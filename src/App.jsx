@@ -15,7 +15,7 @@ function App() {
 
 
 
-  const BASEURL = 'https://users-crud.academlo.tech'
+  const BASEURL = 'https://user-crud-m7y0.onrender.com'
   const [ users, getUsers, createUser, deleteUser, updateUser ] = useCrud(BASEURL)
   
   useEffect(() => {
